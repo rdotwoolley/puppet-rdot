@@ -1,10 +1,10 @@
 {
-  "name": "solium",
+  "name": "rdot",
   "version": "0.1.0",
   "author": "Solium",
-  "summary": "Install Solium dev environment",
+  "summary": "Install rdot environment",
   "license": "Apache 2.0",
-  "source": "https://github.com/samsonnguyen/puppet-solium",
+  "source": "https://github.com/rwoolley/puppet-rdot",
   "issues_url": null,
   "dependencies": [
     {
@@ -13,4 +13,3 @@
     }
   ]
 }
-

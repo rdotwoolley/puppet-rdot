@@ -1,6 +1,6 @@
 # Puppet-solium #
 ## What is it? ##
-For use with boxen/puppet. This puppet module will boostrap a new OSX install to get a working LIVE-team environment.
+For use with boxen/puppet. This puppet module will boostrap a new OSX install to get a working environment for the typical work a web ops manager might do.
 
 Installs the following applications:
 
@@ -11,9 +11,6 @@ Installs the following applications:
 - hipchat
 - ant
 - vagrant
-- shareworks (threee branches)
-- weblogic
-- intellij
 - sqldeveloper
 - bash-completion
 - tnsnames
@@ -43,4 +40,3 @@ Finally run:
     /script/cibuild
 
 If cibuild returns cleanly, you can push into a branch and submit a pull request.
-
