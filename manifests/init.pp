@@ -18,18 +18,8 @@ class solium(
 
   ## Variables
   $home = "/Users/${user}"
-  $default_branches = [ { 'name'      => 'solium-branch1',
-                          'sw_branch' => 'shareworks-5_22_br' },
-                        { 'name'      => 'solium-branch2',
-                          'sw_branch' => 'shareworks-5_23_br' },
-                        { 'name'      => 'solium-branch3',
-                          'sw_branch' => 'shareworks-5_24_br' } ]
-  $real_branches = $branches? {
-    undef   => $default_branches,
-    default => $branches
-  }
-
-  ## Homebrew packages
+  
+## Homebrew packages
   $homebrew_packages = [ 'coreutils','renameutils' ]
   package { $homebrew_packages:
     ensure => 'installed'
@@ -46,26 +36,6 @@ class solium(
 
   class { 'solium::java6':
     source => "${files_url}/JavaForOSX2014-001.dmg"
-  }
-
-  class { 'solium::weblogic':
-    version     => '10.3.6.0.6',
-    url         => "${files_url}/wls1036_dev_w_nativeio.zip",
-    install_dir => '/opt/java/oracle/weblogic/',
-  }
-
-  class { 'intellij':
-    edition => 'ultimate',
-    version => '14.1'
-  }
-
-  class { 'solium::shareworks':
-    user     => $user,
-    group    => $group,
-    password => $password,
-    host     => $svn_host,
-    branches => $real_branches,
-    home     => $home
   }
 
   class { 'solium::sqldeveloper':
