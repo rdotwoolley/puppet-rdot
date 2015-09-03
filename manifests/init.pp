@@ -1,5 +1,5 @@
 # This is a placeholder class.
-class solium(
+class rdot(
     $user      = $::boxen_user,
     $password  = undef,
     $branches  = undef,
@@ -18,7 +18,7 @@ class solium(
 
   ## Variables
   $home = "/Users/${user}"
-  
+
 ## Homebrew packages
   $homebrew_packages = [ 'coreutils','renameutils' ]
   package { $homebrew_packages:
@@ -26,7 +26,6 @@ class solium(
   }
 
   ## Vagrant plugins
-  vagrant::plugin { 'berkshelf': } # Resolves to vagrant-berkshelf
   vagrant::plugin { 'omnibus': }
 
   class { 'solium::jenv':
