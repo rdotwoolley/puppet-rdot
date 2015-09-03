@@ -1,7 +1,7 @@
 {
   "name": "rdot",
   "version": "0.1.0",
-  "author": "Solium",
+  "author": "rwoolley",
   "summary": "Install rdot environment",
   "license": "Apache 2.0",
   "source": "https://github.com/rwoolley/puppet-rdot",
