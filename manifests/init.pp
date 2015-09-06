@@ -4,7 +4,7 @@ class rdot(
     $password  = undef,
     $branches  = undef,
     $group     = 'staff',
-    $files_url = 'http://sharkcage.solium.com/vagrant-files',
+    $files_url = 'https://sharkcage.solium.com/vagrant-files',
     $svn_host  = 'https://svn.solium.com/svn/shareworks/branches/',
   ) {
   include boxen::config
