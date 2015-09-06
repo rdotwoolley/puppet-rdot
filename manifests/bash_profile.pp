@@ -9,7 +9,7 @@ class rdot::bash_profile( $user  = undef,
   file { "${home}/.solium_profile":
     owner   => $user,
     group   => $group,
-    content => template('solium/bash_profile/solium_profile.erb'),
+    content => template('rdot/bash_profile/solium_profile.erb'),
   }
 
   file_line { 'source_solium_profile':
