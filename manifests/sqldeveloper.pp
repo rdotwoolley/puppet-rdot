@@ -18,7 +18,7 @@ class rdot::sqldeveloper( $version = '4.0.3.16.84',
   file { '/Applications/SQLDeveloper.app/.java-version':
     owner   => $user,
     group   => $group,
-    content => template('solium/sqldeveloper/.java-version.erb'),
+    content => template('rdot/sqldeveloper/.java-version.erb'),
     require => [ Package['jenv'],Package['sqldeveloper'] ],
   }
 }
