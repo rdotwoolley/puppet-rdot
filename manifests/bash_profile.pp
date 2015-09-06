@@ -1,5 +1,5 @@
 # Copy Solium bash profile setup
-class solium::bash_profile( $user  = undef,
+class rdot::bash_profile( $user  = undef,
                             $group = undef,
                             $home  = undef ) {
   validate_string($home,

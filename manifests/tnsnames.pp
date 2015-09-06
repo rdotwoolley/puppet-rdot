@@ -1,5 +1,5 @@
 # install tnsnames.ora
-class solium::tnsnames($version = undef,
+class rdot::tnsnames($version = undef,
                         $host    = undef) {
   validate_string($version,
                   $host)

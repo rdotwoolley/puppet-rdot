@@ -1,5 +1,5 @@
 # Installs java7
-class solium::java7 ($source = undef) {
+class rdot::java7 ($source = undef) {
   validate_string($source)
 
   package { 'Java 7' :

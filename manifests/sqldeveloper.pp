@@ -1,5 +1,5 @@
 # Install sqldeveloper
-class solium::sqldeveloper( $version = '4.0.3.16.84',
+class rdot::sqldeveloper( $version = '4.0.3.16.84',
                             $user    = undef,
                             $group   = undef,
                             $host    = undef) {

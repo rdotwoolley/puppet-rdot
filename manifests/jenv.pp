@@ -1,5 +1,5 @@
 ## Installs jenv and set's up various components
-class solium::jenv( $user = undef,
+class rdot::jenv( $user = undef,
                     $home = undef) {
 
   validate_string($user,

@@ -1,5 +1,5 @@
 # Installs java6
-class solium::java6 ($source = undef) {
+class rdot::java6 ($source = undef) {
   validate_string($source)
 
   package { 'Java 6' :
