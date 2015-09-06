@@ -28,24 +28,24 @@ class rdot(
   ## Vagrant plugins
   vagrant::plugin { 'omnibus': }
 
-  class { 'solium::jenv':
+  class { 'rdot::jenv':
     user  => $user,
     home  => $home,
   }
 
-  class { 'solium::java6':
+  class { 'rdot::java6':
     source => "${files_url}/JavaForOSX2014-001.dmg"
   }
 
-  class { 'solium::sqldeveloper':
+  class { 'rdot::sqldeveloper':
     version  => '4.0.3.16.84',
     user     => $user,
     group    => $group,
     host     => $files_url
   }
 
-  class { 'solium::bashcompletion': }
-  class { 'solium::tnsnames':
+  class { 'rdot::bashcompletion': }
+  class { 'rdot::tnsnames':
     version  => '0.0.1',
     host     => $files_url,
   }
@@ -55,7 +55,7 @@ class rdot(
     homebrew_root => $boxen::config::homebrewdir,
   }
 
-  class { 'solium::bash_profile':
+  class { 'rdot::bash_profile':
     user    => $user,
     group   => $group,
     home    => $home,
@@ -63,8 +63,8 @@ class rdot(
 
   ## Define strict dependency ordering here
   Class['jenv']
-  -> Class['solium::java6']
-  -> Class['solium::java7']
+  -> Class['rdot::java6']
+  -> Class['rdot::java7']
 
   Package['jenv']
   -> Package['ant']
