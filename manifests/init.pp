@@ -38,7 +38,7 @@ class rdot(
   }
 
   class { 'rdot::java7':
-    source => "${files_url}/JavaForOSX2014-001.dmg"
+    source => "${files_url}/jdk-7u75-macosx-x64.dmg"
   }
 
   class { 'rdot::sqldeveloper':
