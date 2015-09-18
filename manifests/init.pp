@@ -9,7 +9,6 @@ class rdot(
   ) {
   include boxen::config
   require homebrew
-  #include java7
   include git
   include iterm2::dev
   include iterm2::colors::solarized_dark
