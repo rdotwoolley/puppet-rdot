@@ -37,6 +37,10 @@ class rdot(
     source => "${files_url}/JavaForOSX2014-001.dmg"
   }
 
+  class { 'rdot::java7':
+    source => "${files_url}/JavaForOSX2014-001.dmg"
+  }
+
   class { 'rdot::sqldeveloper':
     version  => '4.0.3.16.84',
     user     => $user,
