@@ -5,7 +5,6 @@ class rdot(
     $branches  = undef,
     $group     = 'staff',
     $files_url = 'https://sharkcage.solium.com/vagrant-files',
-    $svn_host  = 'https://svn.solium.com/svn/shareworks/branches/',
   ) {
   include boxen::config
   require homebrew
@@ -30,10 +29,6 @@ class rdot(
   class { 'rdot::jenv':
     user  => $user,
     home  => $home,
-  }
-
-  class { 'rdot::java6':
-    source => "${files_url}/JavaForOSX2014-001.dmg"
   }
 
   class { 'rdot::java7':
@@ -66,7 +61,6 @@ class rdot(
 
   ## Define strict dependency ordering here
   Class['jenv']
-  -> Class['rdot::java6']
   -> Class['rdot::java7']
 
   Package['jenv']
